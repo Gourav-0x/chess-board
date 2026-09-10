@@ -1,0 +1,309 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f0f2f5;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.main-container {
+    width: 100%;
+
+    max-width: 980px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* =========================
+   LEFT SECTION
+========================= */
+
+.left-section {
+    width: 50%;
+
+    padding-left: 20px;
+
+    margin-top: -20px;
+}
+
+
+/* Facebook Logo */
+
+.left-section h1 {
+    color: #1877f2;
+
+    font-size: 54px;
+
+    font-weight: bold;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Description */
+
+.left-section p {
+    color: #1c1e21;
+
+    font-size: 24px;
+
+    line-height: 1.25;
+}
+
+
+/* =========================
+   RIGHT SECTION
+========================= */
+
+.right-section {
+    width: 42%;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+/* =========================
+   LOGIN BOX
+========================= */
+
+.login-box {
+    width: 100%;
+
+    max-width: 320px;
+
+    background-color: white;
+
+    padding: 16px;
+
+    border-radius: 7px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.20);
+
+    text-align: center;
+}
+
+
+/* =========================
+   INPUT FIELDS
+========================= */
+
+.login-box input {
+    width: 100%;
+
+    height: 44px;
+
+    padding: 0 12px;
+
+    margin-bottom: 11px;
+
+    border: 1px solid #dddfe2;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    color: #1c1e21;
+}
+
+
+/* Input Focus */
+
+.login-box input:focus {
+    border-color: #1877f2;
+
+    box-shadow:
+        0 0 0 1px #1877f2;
+}
+
+
+/* Placeholder */
+
+.login-box input::placeholder {
+    color: #777;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-btn {
+    width: 100%;
+
+    height: 43px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #1877f2;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* Login Hover */
+
+.login-btn:hover {
+    background-color: #166fe5;
+}
+
+
+/* =========================
+   FORGOT PASSWORD
+========================= */
+
+.forgot-password {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    color: #1877f2;
+
+    font-size: 12px;
+
+    text-decoration: none;
+}
+
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   HORIZONTAL LINE
+========================= */
+
+.line {
+    width: 100%;
+
+    height: 1px;
+
+    background-color: #dadde1;
+
+    margin: 14px 0 18px;
+}
+
+
+/* =========================
+   CREATE ACCOUNT BUTTON
+========================= */
+
+.create-account {
+    background-color: #42b72a;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 12px 17px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* Create Account Hover */
+
+.create-account:hover {
+    background-color: #36a420;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 750px) {
+
+    body {
+        align-items: flex-start;
+    }
+
+    .main-container {
+        flex-direction: column;
+
+        padding-top: 60px;
+    }
+
+
+    .left-section {
+        width: 100%;
+
+        padding-left: 0;
+
+        text-align: center;
+
+        margin-bottom: 35px;
+    }
+
+
+    .left-section h1 {
+        font-size: 48px;
+    }
+
+
+    .left-section p {
+        font-size: 20px;
+    }
+
+
+    .right-section {
+        width: 100%;
+    }
+
+
+    .login-box {
+        max-width: 360px;
+    }
+}

@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================================
+   MAIN LUDO BOARD
+========================================= */
+
+.ludo-board {
+    width: 520px;
+    height: 520px;
+
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+
+    background: white;
+
+    border: 3px solid #111;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.15);
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   HOME AREAS
+========================================= */
+
+.home {
+    position: absolute;
+
+    width: 40%;
+    height: 40%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #111;
+}
+
+
+/* Green */
+
+.green-home {
+    top: 0;
+    left: 0;
+
+    background: #00b83f;
+}
+
+
+/* Yellow */
+
+.yellow-home {
+    top: 0;
+    right: 0;
+
+    background: #ffe900;
+}
+
+
+/* Red */
+
+.red-home {
+    bottom: 0;
+    left: 0;
+
+    background: #ff1111;
+}
+
+
+/* Blue */
+
+.blue-home {
+    bottom: 0;
+    right: 0;
+
+    background: #123bb7;
+}
+
+
+/* =========================================
+   WHITE TOKEN BOX
+========================================= */
+
+.token-box {
+    width: 64%;
+    height: 64%;
+
+    background: white;
+
+    border: 2px solid #111;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    gap: 16px;
+
+    padding: 16px;
+
+    align-items: center;
+    justify-items: center;
+}
+
+
+/* =========================================
+   TOKENS
+========================================= */
+
+.token {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    border: 2px solid #111;
+
+    box-shadow:
+        inset 0 -3px 0 rgba(0,0,0,.15),
+        0 1px 1px rgba(0,0,0,.2);
+}
+
+
+/* Green token */
+
+.green-token {
+    background: #00b83f;
+}
+
+
+/* Yellow token */
+
+.yellow-token {
+    background: #ffe900;
+}
+
+
+/* Red token */
+
+.red-token {
+    background: #ff1111;
+}
+
+
+/* Blue token */
+
+.blue-token {
+    background: #1743c2;
+}
+
+
+/* =========================================
+   TRACK BASE
+========================================= */
+
+.track {
+    position: absolute;
+
+    display: grid;
+
+    background: white;
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   INDIVIDUAL CELLS
+========================================= */
+
+.cell {
+    border: 1px solid #111;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   TOP TRACK
+========================================= */
+
+.top-track {
+
+    top: 0;
+
+    left: 33.33%;
+
+    width: 20%;
+
+    height: 40%;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-rows: repeat(6, 1fr);
+}
+
+
+/* =========================================
+   BOTTOM TRACK
+========================================= */
+
+.bottom-track {
+
+    bottom: 0;
+
+    left: 33.33%;
+
+    width: 20%;
+
+    height: 40%;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-rows: repeat(6, 1fr);
+}
+
+
+/* =========================================
+   LEFT TRACK
+========================================= */
+
+.left-track {
+
+    left: 0;
+
+    top: 33.33%;
+
+    width: 40%;
+
+    height: 20%;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    grid-template-rows: repeat(3, 1fr);
+}
+
+
+/* =========================================
+   RIGHT TRACK
+========================================= */
+
+.right-track {
+
+    right: 0;
+
+    top: 33.33%;
+
+    width: 40%;
+
+    height: 20%;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    grid-template-rows: repeat(3, 1fr);
+}
+
+
+/* =========================================
+   COLORED PATHS
+========================================= */
+
+.yellow-cell {
+    background: #ffe900;
+}
+
+.green-cell {
+    background: #00b83f;
+}
+
+.red-cell {
+    background: #ff1111;
+}
+
+.blue-cell {
+    background: #123bb7;
+}
+
+
+/* =========================================
+   STAR
+========================================= */
+
+.star {
+    font-size: 26px;
+    color: #111;
+    background: white;
+}
+
+
+/* =========================================
+   ARROWS
+========================================= */
+
+.arrow {
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.green-arrow {
+    color: #00a93a;
+}
+
+.yellow-arrow {
+    color: #ffe000;
+}
+
+.red-arrow {
+    color: #ff1111;
+}
+
+.blue-arrow {
+    color: #1743c2;
+}
+
+
+/* =========================================
+   CENTER
+========================================= */
+
+.center {
+
+    position: absolute;
+
+    left: 40%;
+
+    top: 40%;
+
+    width: 20%;
+
+    height: 20%;
+
+    background: white;
+
+    border: 1px solid #111;
+
+    z-index: 10;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   CENTER TRIANGLES
+========================================= */
+
+.triangle {
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    border-style: solid;
+}
+
+
+/* Yellow - top */
+
+.triangle-yellow {
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 50%;
+
+    background: #ffe900;
+
+    clip-path: polygon(
+        50% 100%,
+        0 0,
+        100% 0
+    );
+}
+
+
+/* Blue - right */
+
+.triangle-blue {
+
+    top: 0;
+    right: 0;
+
+    width: 50%;
+    height: 100%;
+
+    background: #1743c2;
+
+    clip-path: polygon(
+        0 50%,
+        100% 0,
+        100% 100%
+    );
+}
+
+
+/* Red - bottom */
+
+.triangle-red {
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 50%;
+
+    background: #ff1111;
+
+    clip-path: polygon(
+        0 100%,
+        100% 100%,
+        50% 0
+    );
+}
+
+
+/* Green - left */
+
+.triangle-green {
+
+    left: 0;
+    top: 0;
+
+    width: 50%;
+    height: 100%;
+
+    background: #00b83f;
+
+    clip-path: polygon(
+        0 0,
+        100% 50%,
+        0 100%
+    );
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .ludo-board {
+        width: 94vw;
+        height: 94vw;
+    }
+
+    .token {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .token-box {
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .star,
+    .arrow,
+    .cell {
+        font-size: 4vw;
+    }
+}

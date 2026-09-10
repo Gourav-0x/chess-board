@@ -1,0 +1,323 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f2f2f2;
+}
+
+
+/* =========================
+   LOGIN CONTAINER
+========================= */
+
+.login-container {
+    width: 360px;
+    min-height: 600px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #4f5bd5 0%,
+            #833ab4 30%,
+            #c13584 55%,
+            #e1306c 75%,
+            #fd1d1d 100%
+        );
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   LOGIN BOX
+========================= */
+
+.login-box {
+    flex: 1;
+
+    padding: 85px 25px 35px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   INSTAGRAM LOGO
+========================= */
+
+.logo {
+    margin-bottom: 35px;
+
+    color: white;
+
+    font-family: cursive;
+
+    font-size: 38px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   INPUT BOX
+========================= */
+
+.input-box {
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: 10px;
+}
+
+
+/* Input */
+
+.input-box input {
+    width: 100%;
+    height: 42px;
+
+    padding: 0 12px;
+
+    border: none;
+    border-radius: 4px;
+
+    outline: none;
+
+    background: white;
+
+    color: #333;
+
+    font-size: 12px;
+}
+
+
+/* Placeholder */
+
+.input-box input::placeholder {
+    color: #999;
+}
+
+
+/* =========================
+   PASSWORD EYE
+========================= */
+
+.eye {
+    position: absolute;
+
+    right: 12px;
+    top: 11px;
+
+    color: #777;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   FORGOT PASSWORD
+========================= */
+
+.forgot {
+    display: block;
+
+    margin: 7px 2px 18px;
+
+    color: white;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    text-align: right;
+
+    text-decoration: none;
+}
+
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-btn {
+    width: 100%;
+    height: 40px;
+
+    border: none;
+    border-radius: 4px;
+
+    background: #0095f6;
+
+    color: white;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.login-btn:hover {
+    background: #0077c8;
+}
+
+
+/* =========================
+   OR DIVIDER
+========================= */
+
+.divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 20px 0;
+}
+
+
+.line {
+    flex: 1;
+
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.5);
+}
+
+
+.divider span {
+    color: white;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   FACEBOOK LOGIN
+========================= */
+
+.facebook-login {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.facebook-icon {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 17px;
+    height: 17px;
+
+    margin-right: 6px;
+
+    background: white;
+
+    color: #1877f2;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   SIGN UP SECTION
+========================= */
+
+.signup-section {
+    min-height: 75px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+
+    color: white;
+
+    font-size: 12px;
+}
+
+
+.signup-section a {
+    margin-left: 4px;
+
+    color: white;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+.signup-section a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 450px) {
+
+    .login-container {
+        width: 90%;
+
+        min-height: 580px;
+    }
+
+    .login-box {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .logo {
+        font-size: 34px;
+    }
+}
